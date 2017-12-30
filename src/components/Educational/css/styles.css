@@ -1,0 +1,50 @@
+.educational{
+}
+
+.educational__header {
+    position: absolute;
+    background-color: #009999;
+    height: 120px;
+    width: 100vw;
+    padding: 20px;
+    color: #FFCB64;
+    font-size: 4rem;
+}
+
+.educational__header__menu{
+    position: absolute;
+    left: 40vw;
+    bottom: 0px;
+}
+
+.educational__content{
+    position: absolute;
+    color: #FFCB64;
+    font-size: 2rem;
+    top: 160px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    background-color: #009999;
+}
+
+.educational__content__defaultSlide{
+    position: relative;
+    width: calc(100vw - 45px);
+    border-radius: 1000px;
+    height: 75vh;
+    border: solid 4px #FF7400;
+    background-color: #FF7400;
+    background-repeat: no-repeat;
+    background-image: url("../images/react-word-game-space.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    z-index: 5;
+}
+
+.educational__content__defaultSlide:hover{
+    border: solid 4px #1240AB;
+}
