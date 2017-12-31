@@ -48,3 +48,37 @@
 .educational__content__defaultSlide:hover{
     border: solid 4px #1240AB;
 }
+
+/* Search */
+
+.search__keywords{
+    position: absolute;
+    left: 20px;
+    overflow: hidden;
+}
+
+.search__form{
+    width: 25%;
+    height: 50px;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 25px;
+    border: solid 4px #FF7400;
+    background-color: #009999;
+    padding-left: 15px;
+    caret-color: #FF7400;
+    color: #FFCB64;
+    cursor: url(../images/cursor.png), auto;
+}
+
+input:focus{
+    outline-style: none;
+}
+
+*:focus {
+    outline-style: none;
+}
+
+.keywordArray{
+    color:#1240AB;
+}

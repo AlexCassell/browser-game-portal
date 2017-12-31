@@ -13,6 +13,7 @@ body, html {
   user-select: none;
   border: solid 4px #FF7400;
   background-color: #FF7400;
+  cursor: url(../images/cursor.png), auto;
 }
 
 .App {
