@@ -9,6 +9,18 @@
     padding: 20px;
     color: #FFCB64;
     font-size: 4rem;
+    z-index: 2;
+}
+
+.midLine{
+    position: absolute;
+    left: 0px;
+    height: 4px;
+    width: 100%;
+    top: 200px;
+    border-top: solid 3px #FF7400; 
+    border-bottom: solid 3px #FF7400;
+    z-index: -1; 
 }
 
 .educational__header__menu{
@@ -42,7 +54,7 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    z-index: 5;
+    z-index: 1;
 }
 
 .educational__content__defaultSlide:hover{
@@ -59,7 +71,7 @@
 
 .search__form{
     width: 25%;
-    height: 50px;
+    height: 55px;
     font-size: 3rem;
     text-align: center;
     border-radius: 25px;
@@ -69,6 +81,7 @@
     caret-color: #FF7400;
     color: #FFCB64;
     cursor: url(../images/cursor.png), auto;
+    z-index: 5;
 }
 
 input:focus{
@@ -80,5 +93,13 @@ input:focus{
 }
 
 .keywordArray{
+}
+
+/* Buttons */
+.buttons__keywords{
     color:#1240AB;
+    cursor: url(../images/button-cursor.png), auto;
+    font-size: 2rem;
+    border: none;
+    background: none;
 }

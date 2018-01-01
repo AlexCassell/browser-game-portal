@@ -6,12 +6,13 @@ import educationalGamesArray from '../components/educationalGamesArray';
 
 import '../css/styles.css';
 
-let searchInput = "", keywordArray = [], keywordCount = 0, tempLetterHolder ="", searchText=<div className="search__keywords">{searchInput}<span className="keywordArray">{keywordArray}</span></div>;
+let searchInput = "", keywordArray = [], keywordButtonArray = [], keywordCount = 0, tempLetterHolder ="", searchText=<div className="search__keywords">{searchInput}<span className="keywordArray">{keywordArray}</span></div>;
 
 class EducationalSearch extends Component {
     constructor(props) {
         super(props);
         this.state = { 'name': ''};
+        this.state = { 'screenUpdate': ''};
     }
 
 
@@ -31,11 +32,13 @@ class EducationalSearch extends Component {
     }
 
     keywords(e){
+        if(e.target.value === ""){
+            this.deleteKeyword(e);
+        }
         this.setState({
             name: e.target.value
         });
         tempLetterHolder = e.target.value;
-
         if(tempLetterHolder.length > 9){
             tempLetterHolder = tempLetterHolder.replace(/[^a-z]/gi, '');
             if(tempLetterHolder !== ""){
@@ -45,12 +48,15 @@ class EducationalSearch extends Component {
                 }
                 else{
                     keywordCount++;
+                    return;
                 }
                 if(keywordCount === 1){
                     keywordArray.push(tempLetterHolder);
+                    keywordButtonArray.push(<button className="buttons__keywords" onClick={this.deleteKeyword.bind(this, keywordCount)}>{tempLetterHolder}</button>);
                 }
                 else{
-                    keywordArray.push(", " + tempLetterHolder);
+                    keywordArray.push(tempLetterHolder);
+                    keywordButtonArray.push(<button className="buttons__keywords" onClick={this.deleteKeyword.bind(this, keywordCount)}>{tempLetterHolder}</button>);
                 }
                 e.target.value = "";
             }
@@ -59,40 +65,36 @@ class EducationalSearch extends Component {
             });
         }
 
-        if(e.target.value === " "){
-            e.target.value = "";
-            this.setState({
-                name: e.target.value
-            });
-        }
+        // if(e.target.value === " "){
+        //     e.target.value = "";
+        //     this.setState({
+        //         name: e.target.value
+        //     });
+        // }
         
-        for(let i = 0; i < tempLetterHolder.length; i++){
+        for(let i = 1; i < tempLetterHolder.length; i++){
             if(tempLetterHolder[i] === " "){
                 if(tempLetterHolder !== " "){
                     tempLetterHolder = tempLetterHolder.replace(/[^a-z]/gi, '');
                     if(tempLetterHolder !== ""){
-                        if(keywordCount === 6){
-                            keywordArray.splice(0, 1);
-                            keywordArray[0] = keywordArray[0].replace(/[^a-z]/gi, '');
+                        if(keywordCount === 10){
+                            return;
+                            // keywordArray.splice(0, 1);
+                            // keywordArray[0] = keywordArray[0].replace(/[^a-z]/gi, '');
+                            // keywordCount--;
                         }
                         else{
                             keywordCount++;
                         }
-                        if(keywordCount === 1){
-                            keywordArray.push(tempLetterHolder);
+                        keywordArray.push(tempLetterHolder);
+                        keywordButtonArray.push(<button className="buttons__keywords" onClick={this.deleteKeyword.bind(this, keywordCount)}>{tempLetterHolder}</button>);
                         }
-                        else{
-                            keywordArray.push(", " + tempLetterHolder);
-                        }
-                        
-                        
                     }
-                    e.target.value = "";
+                    e.target.value = " ";
                     this.setState({
                         name: e.target.value
                     });
                 }
-            }
             }
             if(keywordCount > 1){
                 searchInput = "Searching for games with the keywords: ";
@@ -100,19 +102,39 @@ class EducationalSearch extends Component {
             else if(keywordCount === 1) {
                 searchInput = "Searching for games with the keyword: ";
             }
-            else if(keywordCount === 0) {
-                searchInput = "";
-            }
     }
 
+    // deleteKeyword(keywordCount){
+    //     console.log(keywordCount + " " + keywordButtonArray.length);
+    //     keywordButtonArray.splice((keywordCount - 1), 1);
+    //     keywordCount--;
 
+    //     console.log(keywordCount + " " + keywordButtonArray.length);
+    //     this.setState({screenUpdate: ''});        
+    // }
+
+    deleteKeyword(e){
+
+        if(keywordArray.length > 1){
+            e.target.value = keywordArray[keywordArray.length-1];
+        }
+        else if (keywordArray.length === 1){
+            e.target.value = keywordArray[0];
+        }
+        keywordArray.splice(-1,1);
+        keywordButtonArray.splice(-1,1);
+        if(keywordCount > 0){keywordCount--;}
+        this.setState({screenUpdate: ''});
+    }
+
+        
     
 
     render() {
         return (
             <div>
                 <div className="search"><input type="text" className="search__form" value={this.state.name} onChange={ (e) => this.handleInput(e) } /></div>
-                <div className="search__keywords">{searchInput}<span className="keywordArray">{keywordArray}</span></div>
+                <div className="search__keywords">{searchInput}<span className="keywordArray">{keywordButtonArray}</span></div>
             </div>
             );
         }

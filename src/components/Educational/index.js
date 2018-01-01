@@ -14,18 +14,20 @@ class Home extends Component {
     }
 
     changeSlide(){
-        this.state = {'content': 
+        this.setState({
+            content: 
         <div>
             <div className="educational__content__defaultSlide">
             
             </div>
-        </div>        
-};
+        </div>
+        });
     }
 
     render() {
         return (
             <div className="educational">
+            <div className="midLine" />
                 <div className="educational__header">
                     <div className="educational__header__menu">
                         Educational Header
