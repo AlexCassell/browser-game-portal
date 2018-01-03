@@ -35,8 +35,8 @@
     font-size: 2rem;
     top: 160px;
     left: 0px;
-    width: 100vw;
-    height: 100vh;
+    width: calc(100% - 20px);
+    height: calc(100% - 150px);
     padding: 10px;
     background-color: #009999;
 }
@@ -59,6 +59,311 @@
 
 .educational__content__defaultSlide:hover{
     border: solid 4px #1240AB;
+}
+
+.educational__content__search{
+    /* border: solid 4px #1240AB; */
+    height: 75vh;
+    width: 90vw;
+    margin: auto;
+    padding-left: 15px;
+}
+
+    /* Four or Less Game Images */
+
+    
+    .educational__content__search__itemFourOrLess{ /* only in case of error */
+        position: relative;
+        top: 40px;
+        height: 70vh;
+        width: 22vw;
+        border: solid 3px #FF7400;
+        float: left;
+        background-image: url("../images/gameImages/3.jpg");
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+
+.educational__content__search__itemFourOrLess__Defaults__title{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    background: black;
+    text-align: center;
+    /* width */
+}
+
+.educational__content__search__itemFourOrLess__Defaults__description{
+    position: absolute;
+    bottom: 0;
+    font-size: auto;
+    padding: 2px;
+    background: black;
+    border-top: solid 3px white;
+}
+
+.educational__content__search__itemFourOrLess0{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #1240AB;
+    color: white;
+    text-shadow: 2px 2px #1240AB;
+    float: left;
+    background-image: url("../images/gameImages/0.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess1{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    color: red;
+    text-shadow: 2px 2px purple;
+    float: left;
+    background-image: url("../images/gameImages/1.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess2{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/2.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess3{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/3.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess4{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #1240AB;
+    color: white;
+    text-shadow: 2px 2px #1240AB;
+    float: left;
+    background-image: url("../images/gameImages/4.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess5{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/5.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess6{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/6.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess7{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/7.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess8{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #1240AB;
+    color: white;
+    text-shadow: 2px 2px #1240AB;
+    float: left;
+    background-image: url("../images/gameImages/8.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess9{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/9.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess10{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/10.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess11{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/11.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess12{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #1240AB;
+    color: white;
+    text-shadow: 2px 2px #1240AB;
+    float: left;
+    background-image: url("../images/gameImages/12.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess13{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/13.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess14{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/14.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess15{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/15.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemFourOrLess16{
+    position: relative;
+    top: 40px;
+    height: 70vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/16.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.educational__content__search__itemMoreThanFour{
+    position: relative;
+    top: 40px;
+    height: 35vh;
+    width: 22vw;
+    border: solid 3px #FF7400;
+    float: left;
+    background-image: url("../images/gameImages/1.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 /* Search */

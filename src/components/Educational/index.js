@@ -17,9 +17,6 @@ class Home extends Component {
         this.setState({
             content: 
         <div>
-            <div className="educational__content__defaultSlide">
-            
-            </div>
         </div>
         });
     }
