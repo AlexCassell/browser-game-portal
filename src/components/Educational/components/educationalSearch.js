@@ -9,7 +9,9 @@ import '../css/styles.css';
 
 
 let searchInput = "", keywordArray = [], keywordButtonArray = [], keywordCount = 0, tempLetterHolder ="", searchText=<div className="search__keywords">{searchInput}<span className="keywordArray">{keywordArray}</span></div>;
-let searchResult = [];
+let searchResult = [], searchAnimationString = "Search...", searchAnimationCount = 0;
+const searchAnimationStringImmutable ="Search...";
+
 class EducationalSearch extends Component {
     constructor(props) {
         super(props);
@@ -113,7 +115,7 @@ class EducationalSearch extends Component {
 
         //Search Functions
     keywordsSearch(){
-        console.log(keywordArray);
+        // console.log(keywordArray);
         let gameArray = [];
         for(let i = 0;i < keywordArray.length; i++){
             for(let x = 0;x < educationalGamesArray.length; x++){
@@ -128,7 +130,7 @@ class EducationalSearch extends Component {
     }
 
     removeDuplicates(gameArray){
-        console.log(gameArray);
+        // console.log(gameArray);
         for(let i = 0; i < gameArray.length; i++){
             for(let x = 0; x < gameArray.length; x++){
                 if(gameArray[i] === gameArray[x] && x !== i){
@@ -137,13 +139,13 @@ class EducationalSearch extends Component {
             }
         }
         this.displayFoundGames(gameArray);
-        console.log(gameArray);
+        // console.log(gameArray);
         
     }
 
     displayFoundGames(gameArray){
         searchResult = [];
-        console.log(gameArray);
+        // console.log(gameArray);
         for(let i = 0; i < gameArray.length; i++){//handles first page
             if(i <= educationalGamesArray.length)
                 if(gameArray.length > 4){
@@ -157,207 +159,208 @@ class EducationalSearch extends Component {
                 }
                 else{
                     if(gameArray[i] === 0){
+                        let game = 0;
                         searchResult.push(
-                        <div className="educational__content__search__itemFourOrLess0">
+                        <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess0">
                             <div className="educational__content__search__itemFourOrLess__Defaults__title">
                             {educationalGamesArray[gameArray[i]][0]}
                             </div>
                             <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                 A rocket powered word game.  Race against the computer leveraging your knowledge of the Dolch word list.
                             </div>
-                        </div>
+                        </button>
                         );
                     }
                     else if(gameArray[i] === 1){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess1">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess1">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 2){
                                                 searchResult.push(
-                        <div className="educational__content__search__itemFourOrLess2">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess2">
                             <div className="educational__content__search__itemFourOrLess__Defaults__title">
                             {educationalGamesArray[gameArray[i]][0]}
                             </div>
                             <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                 Some words about a game that does not and never will exist.  This is for demonstration purposes.
                             </div>
-                        </div>
+                        </button>
                         );
                     }
                     else if(gameArray[i] === 3){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess3">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess3">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 4){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess4">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess4">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 5){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess5">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess5">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 6){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess6">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess6">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 7){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess7">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess7">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 8){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess8">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess8">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 9){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess9">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess9">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 10){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess10">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess10">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                         }
                     else if(gameArray[i] === 11){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess11">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess11">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 12){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess12">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess12">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 13){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess13">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess13">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 14){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess14">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess14">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 15){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess15">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess15">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else if(gameArray[i] === 16){
                         searchResult.push(
-                            <div className="educational__content__search__itemFourOrLess16">
+                            <button onClick={() => this.openGame(gameArray[i])} className="educational__content__search__itemFourOrLess16">
                                 <div className="educational__content__search__itemFourOrLess__Defaults__title">
                                 {educationalGamesArray[gameArray[i]][0]}
                                 </div>
                                 <div className="educational__content__search__itemFourOrLess__Defaults__description">
                                     Some words about a game that does not and never will exist.  This is for demonstration purposes.
                                 </div>
-                            </div>
+                            </button>
                             );
                     }
                     else{
@@ -368,7 +371,11 @@ class EducationalSearch extends Component {
             
         }
 
-        console.log(searchResult.length);
+        // console.log(searchResult.length);
+    }
+
+    openGame(game){
+        console.log(game);
     }
 
     //Permanently Delete functions
@@ -401,13 +408,80 @@ class EducationalSearch extends Component {
         console.log("deleteKeyword: " + keywordButtonArray.length);
     }
 
+    test(e){
+        // console.log("Tested " + e.target.value);
+        // if(keywordCount > 0){
+        //     e.target.value = " ";
+        //     // this.setCaretPosition(this.search, 2);
+        // }
+    }
+    // setCaretPosition(elemId, caretPos) {
+    //     let elem = document.getElementById(elemId);
         
+    //     if(elem.createTextRange) {
+    //         let range = elem.createTextRange();
+    //         range.move('character', caretPos);
+    //         range.select();
+    //     }
+    //     else {
+    //         if(elem.selectionStart) {
+    //             elem.focus();
+    //             elem.setSelectionRange(caretPos, caretPos);
+    //         }
+    //         else
+    //             elem.focus();
+    //     }
+    // }
+
+    // moveCaretToEnd(e) {
+    //     console.log("here");
+    //     if (typeof e.selectionStart === "string") {
+    //         e.selectionStart = e.selectionEnd = e.value.length;
+    //     } else if (typeof e.createTextRange !== "undefined") {
+    //         e.focus();
+    //         var range = e.createTextRange();
+    //         range.collapse(false);
+    //         range.select();
+    //     }
+    // }
+
+    // componentWillMount(){
+    //     this.searchAnimation();
+    // }
+
+
+
+    // searchAnimation(searchAnimationCount){
+    //     //create own component
+    //     console.log(searchAnimationString);
+    //     if(searchAnimationCount < searchAnimationString.length){
+    //         if(searchAnimationCount === 0){
+    //             searchAnimationString = this.changeCharacter(searchAnimationString, 0, ' ');
+    //             // searchAnimationString = this.changeCharacter(searchAnimationString, 9, searchAnimationStringImmutable[9]);
+    //             searchAnimationCount++
+    //         }
+    //         else{
+    //             searchAnimationString = this.changeCharacter(searchAnimationString, searchAnimationCount, ' ');
+    //             searchAnimationString = this.changeCharacter(searchAnimationString, searchAnimationCount - 1, searchAnimationStringImmutable[searchAnimationCount - 1]);
+    //             searchAnimationCount++
+    //         }
+            
+    //         setTimeout(this.searchAnimation.bind(this), 200);
+            
+    //     }
+
+    // }
+
+    // changeCharacter(str,index,chr) {
+    //     if(index > str.length - 1) return str;
+    //     return str.substr(0, index) + chr + str.substr(index + 1);
+    // }
     
 
     render() {
         return (
             <div>
-                <div className="search"><input type="text" className="search__form" value={this.state.name} onChange={ (e) => this.handleInput(e) } /></div>
+                <div className="search"><input type="text" placeholder="Search..." onFocus={ (e) => this.test(e) } className="search__form" value={this.state.name} onChange={ (e) => this.handleInput(e) } /></div>
                 <div className="search__keywords">{searchInput}<span className="keywordArray">{keywordButtonArray}</span></div>
                 <div className="educational__content__search">{searchResult}</div>
             </div>

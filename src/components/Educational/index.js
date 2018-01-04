@@ -27,7 +27,7 @@ class Home extends Component {
             <div className="midLine" />
                 <div className="educational__header">
                     <div className="educational__header__menu">
-                        Educational Header
+                        Simulism Game Portal
                     </div>
                 </div>
                 <div className="educational__content">

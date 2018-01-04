@@ -63,10 +63,12 @@
 
 .educational__content__search{
     /* border: solid 4px #1240AB; */
+    position: absolute;
     height: 75vh;
     width: 90vw;
     margin: auto;
-    padding-left: 15px;
+    right: -15%;
+
 }
 
     /* Four or Less Game Images */
@@ -74,9 +76,10 @@
     
     .educational__content__search__itemFourOrLess{ /* only in case of error */
         position: relative;
+        border-radius: 25px;
         top: 40px;
         height: 70vh;
-        width: 22vw;
+        width: 18vw;
         border: solid 3px #FF7400;
         float: left;
         background-image: url("../images/gameImages/3.jpg");
@@ -88,7 +91,9 @@
 
 .educational__content__search__itemFourOrLess__Defaults__title{
     position: absolute;
+    font-size: 2em;
     top: 25%;
+    left: 0;
     width: 100%;
     background: black;
     text-align: center;
@@ -98,7 +103,8 @@
 .educational__content__search__itemFourOrLess__Defaults__description{
     position: absolute;
     bottom: 0;
-    font-size: auto;
+    left: 0;
+    font-size: 2rem;
     padding: 2px;
     background: black;
     border-top: solid 3px white;
@@ -106,9 +112,12 @@
 
 .educational__content__search__itemFourOrLess0{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
+    width: 18vw;
     border: solid 3px #1240AB;
     color: white;
     text-shadow: 2px 2px #1240AB;
@@ -120,12 +129,19 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess0:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess1{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px purple;
     color: red;
     text-shadow: 2px 2px purple;
     float: left;
@@ -136,12 +152,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess1:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess2{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px pink;
+    color: pink;
+    text-shadow: 2px 2px purple;
     float: left;
     background-image: url("../images/gameImages/2.jpg");
     background-size: cover;
@@ -150,12 +175,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess2:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess3{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px yellowgreen;
+    color: yellowgreen;
+    text-shadow: 2px 2px green;
     float: left;
     background-image: url("../images/gameImages/3.jpg");
     background-size: cover;
@@ -164,15 +198,23 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess3:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess4{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
+    width: 18vw;
     border: solid 3px #1240AB;
     color: white;
     text-shadow: 2px 2px #1240AB;
     float: left;
+    overflow: hidden;
     background-image: url("../images/gameImages/4.jpg");
     background-size: cover;
     -webkit-background-size: cover;
@@ -180,12 +222,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess4:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess5{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px orange;
+    color: orange;
+    text-shadow: 2px 2px teal;
     float: left;
     background-image: url("../images/gameImages/5.jpg");
     background-size: cover;
@@ -194,12 +245,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess5:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess6{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px orangered;
+    color: orangered;
+    text-shadow: 2px 2px red;
     float: left;
     background-image: url("../images/gameImages/6.jpg");
     background-size: cover;
@@ -208,12 +268,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess6:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess7{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px blueviolet;
+    color: blueviolet;
+    text-shadow: 2px 2px purple;
     float: left;
     background-image: url("../images/gameImages/7.jpg");
     background-size: cover;
@@ -222,11 +291,18 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess7:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess8{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
+    width: 18vw;
     border: solid 3px #1240AB;
     color: white;
     text-shadow: 2px 2px #1240AB;
@@ -238,12 +314,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess8:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess9{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px green;
+    color: green;
+    text-shadow: 2px 2px greenyellow;
     float: left;
     background-image: url("../images/gameImages/9.jpg");
     background-size: cover;
@@ -252,12 +337,22 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess9:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess10{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px pink;
+    color: pink;
+    text-shadow: 2px 2px red;
     float: left;
     background-image: url("../images/gameImages/10.jpg");
     background-size: cover;
@@ -266,12 +361,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess10:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess11{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px powderblue;
+    color: powderblue;
+    text-shadow: 2px 2px blue;
     float: left;
     background-image: url("../images/gameImages/11.jpg");
     background-size: cover;
@@ -280,11 +384,18 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess11:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess12{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
+    width: 18vw;
     border: solid 3px #1240AB;
     color: white;
     text-shadow: 2px 2px #1240AB;
@@ -296,12 +407,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess12:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess13{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px paleturquoise;
+    color: paleturquoise;
+    text-shadow: 2px 2px purple;
     float: left;
     background-image: url("../images/gameImages/13.jpg");
     background-size: cover;
@@ -310,12 +430,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess13:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess14{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px rebeccapurple;
+    color: rebeccapurple;
+    text-shadow: 2px 2px purple;
     float: left;
     background-image: url("../images/gameImages/14.jpg");
     background-size: cover;
@@ -324,12 +453,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess14:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess15{
     position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    cursor: url(../images/button-cursor.png), auto;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px gold;
+    color: gold;
+    text-shadow: 2px 2px silver;
     float: left;
     background-image: url("../images/gameImages/15.jpg");
     background-size: cover;
@@ -338,12 +476,21 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess15:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemFourOrLess16{
     position: relative;
+    border-radius: 25px;
+    cursor: url(../images/button-cursor.png), auto;
+    overflow: hidden;
     top: 40px;
     height: 70vh;
-    width: 22vw;
-    border: solid 3px #FF7400;
+    width: 18vw;
+    border: solid 3px navy;
+    color: navy;
+    text-shadow: 2px 2px white;
     float: left;
     background-image: url("../images/gameImages/16.jpg");
     background-size: cover;
@@ -352,14 +499,18 @@
     -o-background-size: cover;
 }
 
+.educational__content__search__itemFourOrLess16:hover {
+    border: solid 3px red;
+}
+
 .educational__content__search__itemMoreThanFour{
     position: relative;
     top: 40px;
     height: 35vh;
-    width: 22vw;
+    width: 18vw;
     border: solid 3px #FF7400;
     float: left;
-    background-image: url("../images/gameImages/1.jpg");
+    background-image: url("../images/gameImages/7.jpg");
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -370,7 +521,7 @@
 
 .search__keywords{
     position: absolute;
-    left: 20px;
+    left: 24%;
     overflow: hidden;
 }
 
