@@ -1,5 +1,5 @@
-### Words to come.
+### The beginings of a browser game portal.
 
-## Maybe..
+Part of the search feature is almost finished.
 
-# if you are lucky.
+I may get back to this project when I have the time.
